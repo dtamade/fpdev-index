@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-01-14T00:00:00Z",
+
+  "mirrors": {
+    "github": "https://github.com/dtamade",
+    "gitee": "https://gitee.com/dtamade"
+  },
+
+  "repositories": {
+    "bootstrap": {
+      "name": "fpdev-bootstrap",
+      "description": "FPC bootstrap compilers for building from source",
+      "github": "https://github.com/dtamade/fpdev-bootstrap",
+      "gitee": "https://gitee.com/dtamade/fpdev-bootstrap"
+    },
+    "fpc": {
+      "name": "fpdev-fpc",
+      "description": "Pre-built FPC binary releases",
+      "github": "https://github.com/dtamade/fpdev-fpc",
+      "gitee": "https://gitee.com/dtamade/fpdev-fpc"
+    },
+    "lazarus": {
+      "name": "fpdev-lazarus",
+      "description": "Pre-built Lazarus IDE releases",
+      "github": "https://github.com/dtamade/fpdev-lazarus",
+      "gitee": "https://gitee.com/dtamade/fpdev-lazarus"
+    },
+    "cross": {
+      "name": "fpdev-cross",
+      "description": "Cross-compilation toolchains",
+      "github": "https://github.com/dtamade/fpdev-cross",
+      "gitee": "https://gitee.com/dtamade/fpdev-cross"
+    }
+  },
+
+  "channels": {
+    "stable": {
+      "description": "Tested and verified combinations",
+      "bootstrap": { "ref": "v1.0.0" },
+      "fpc": { "ref": "v3.2.2" },
+      "lazarus": { "ref": "v3.6" }
+    },
+    "edge": {
+      "description": "Latest versions, may have issues",
+      "bootstrap": { "ref": "main" },
+      "fpc": { "ref": "main" },
+      "lazarus": { "ref": "main" }
+    }
+  },
+
+  "compatibility_matrix": {
+    "fpc-3.2.2": {
+      "bootstrap_required": "3.2.0",
+      "lazarus_compatible": ["3.6", "3.4", "3.2"]
+    },
+    "fpc-3.2.0": {
+      "bootstrap_required": "3.0.4",
+      "lazarus_compatible": ["3.4", "3.2", "3.0"]
+    },
+    "fpc-main": {
+      "bootstrap_required": "3.2.2",
+      "lazarus_compatible": ["main"]
+    }
+  }
+}
